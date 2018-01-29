@@ -1,0 +1,157 @@
+
+entity Product 
+{	id Long required,
+    code String  maxlength(10) 
+    description String maxlength(100)
+    uuid String maxlength(40)
+    createDate Date 
+    lastModifiedDate Date
+    endDate Date
+    lastModifiedUser String maxlength(20)    
+}
+entity Subproduct {
+ 	id Long required ,
+    code String required maxlength(10)
+    description String maxlength(50)
+    uuid String maxlength(40)  
+    createDate Date 
+    endDate Date
+    lastModifiedDate Date 
+
+}
+
+entity ReceiveFormat {
+ 	id Long required ,
+    code String required maxlength(10)
+    description String maxlength(50)
+    uuid String maxlength(40)
+    lastModifiedDate Date 
+    endDate Date
+    lastModifiedUser String maxlength(20)    
+}
+entity ReceiveChannel {
+ 	id Long required ,
+    description String maxlength(100)
+    createDate Date 
+    endDate Date
+    lastModifiedDate Date 
+}
+entity ReceiveFrequencyDaily {
+ 	id Long required ,
+ 	reciveDays String
+    reciveHour String required maxlength(100)
+    reciveFestive Boolean
+    nextBusinessDay Boolean
+    nextDayAfterWeekend Boolean
+    threshold String maxlength(5)
+    createDate Date 
+    uuid String maxlength(40)
+    lastModifiedDate Date 
+    endDate Date
+    lastModifiedUser String maxlength(20)    
+    
+}
+entity ReciveFrequencyType {
+	id Long required ,
+    description String maxlength(100)
+    createDate Date 
+    endDate Date
+    lastModifiedDate Date
+    lastModifiedUser String maxlength(20)   
+  }
+  
+entity ReciveFrequencySendDate {
+	id Long required ,
+    description String maxlength(100)
+    createDate Date 
+    endDate Date
+    lastModifiedDate Date
+    lastModifiedUser String maxlength(20)   
+  }
+  
+  entity AssociationCorporateSubProductAcc
+  {
+  	id Long required,
+    uuidStructureCorp Long required 
+    createDate Date 
+    endDate Date
+    lastModifiedDate Date
+    lastModifiedUser String maxlength(20)   
+  }
+	
+entity Alias{
+	id Long required ,
+    description String maxlength(50)
+    createDate Date 
+    endDate Date
+    lastModifiedDate Date
+}
+entity AliasType{
+	id Long required ,
+    description String maxlength(50)
+    createDate Date 
+    endDate Date
+    lastModifiedDate Date
+}
+entity Service{
+	id Long required ,
+    name String maxlength(100)
+    description String maxlength(50)
+    contactNumber String maxlength(50)
+    uuid String maxlength(40)
+    startDate Date
+    createDate Date 
+    endDate Date
+    lastModifiedDate Date
+    lastModifiedUser String maxlength(20)   
+
+}
+entity ServiceType{
+	id Long required ,
+    description String maxlength(100)
+    createDate Date 
+    endDate Date
+    lastModifiedDate Date
+}
+entity ServiceSendFormtat{
+	id Long required ,
+    description String maxlength(100)
+    createDate Date 
+    endDate Date
+    lastModifiedDate Date
+
+}
+entity ServiceSendChannel{
+	id Long required ,
+    description String maxlength(100)
+    createDate Date 
+    endDate Date
+    lastModifiedDate Date
+}
+entity ServiceSendFrequency{
+	id Long required ,
+    description String maxlength(100)
+    createDate Date 
+    endDate Date
+    lastModifiedDate Date
+}
+entity ServiceAddress{
+	id Long required ,
+    uuid String maxlength(40)
+    address String maxlength(100)
+    createDate Date 
+    endDate Date
+    lastModifiedDate Date
+    lastModifiedUser String maxlength(20)   
+}
+entity CrossReference{
+	id Long required ,
+    uuid String maxlength(40)
+    localMovementCode String maxlength(3)
+    swiftCode String maxlength(3)
+    createDate Date 
+    endDate Date
+    lastModifiedDate Date
+    lastModifiedUser String maxlength(20)
+}
+
